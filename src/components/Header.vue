@@ -17,32 +17,32 @@ const toggleMenu=()=>{
 </script>
 
 <template>
-    <header class="bg-gradient-to-r from-sky-100 to-teal-100 sticky top-0 z-50 ">
+    <header class="bg-gradient-to-r from-primary-back to-secondry-back sticky top-0 z-50 ">
         <div class="max-w-screen-xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="" class="flex items-center focus:outline-none focus:ring-2 focus:ring-sky-600 rounded ">
-                <h1 class="text-2xl font-bold text-sky-600">TrioVerse</h1> 
+            <a href="" class="flex items-center focus:outline-none focus:ring-2 focus:ring-primary rounded ">
+                <h1 class="text-2xl font-bold text-primary">TrioVerse</h1> 
             </a>
 
             <nav class="hidden md:flex space-x-6" aria-label="Primary navigation">
                 <a v-for="item in navLinks" :key="item.id"
                  :href="item.link"
-                 class="text-gray-700 hover:text-sky-600 transition-colors duration-200
-                 focus:outline-none focus:ring-2 focus:ring-sky-600 rounded">
+                 class="text-gray-700 hover:text-primary transition-colors duration-200
+                 focus:outline-none focus:ring-2 focus:ring-primary rounded">
                     {{ item.name }}
                 </a>
             </nav>
             <!-- Appointment button (Desktop) -->
              <div class="hidden md:block">
                 <a href="#appointment"
-                class="bg-sky-600 hover:bg-sky-700 text-white px-5 py-2 rounded-full transition-colors
-                duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-sky-800 ring-offset-2">
+                class="bg-primary hover:bg-primary text-white px-5 py-2 rounded-full transition-colors
+                duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-primary ring-offset-2">
                     Book Now
                 </a>
              </div>
              <!-- Mobile Menu Button -->
               <button class="md:hidden p-2 
               focus:outline-none focus:ring-2
-               focus:ring-sky-600 rounded-full"
+               focus:ring-primary rounded-full"
                 @click="toggleMenu" aria-label="Toggle menu" :aria-expanded="isMenuOpen.toString()" aria-controls="mobile menu">
                 <Icon class="w-6 h-6" :icon=" isMenuOpen? 'mdi:close' : 'mdi:menu' " />
               </button>
@@ -54,16 +54,16 @@ const toggleMenu=()=>{
             <ul class="flex flex-col space-y-4">
                 <li v-for="item in navLinks" :key="item.id">
                     <a :href="item.link"
-                    class="block text-gray-700 hover:text-sky-600
+                    class="block text-gray-700 hover:text-primary
                     transition-colors duration-200 py-2 px-2
                     focus:outline-none focus:ring-2
-                    focus:ring-sky-600 rounded-full"
+                    focus:ring-primary rounded-full"
                     @click="toggleMenu">{{ item.name }}</a>
                 </li>
                 <li>
                     <a href="#appointment" @click="toggleMenu"
-                class="block text-center bg-sky-600 hover:bg-sky-700 text-white px-4 py-2 rounded-full transition-colors
-                duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-sky-800 ring-offset-2">
+                class="block text-center bg-primary hover:bg-primary text-white px-4 py-2 rounded-full transition-colors
+                duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-primary ring-offset-2">
                     Book Now
                 </a>
             </li>
